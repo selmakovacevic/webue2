@@ -9,24 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hello_world_component_1 = require('./hello-world.component');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = "World";
+var LoginComponent = (function () {
+    function LoginComponent() {
     }
-    AppComponent = __decorate([
+    LoginComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: '/app/views/root.html'
-        }),
-        core_1.NgModule({
-            declarations: [hello_world_component_1.HelloWorldComponent],
-            bootstrap: [hello_world_component_1.HelloWorldComponent]
+            selector: 'login',
+            templateUrl: '/app/views/login.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], LoginComponent);
+    return LoginComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.LoginComponent = LoginComponent;
+//# sourceMappingURL=login.component.js.map

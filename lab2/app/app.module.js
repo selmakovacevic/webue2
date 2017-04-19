@@ -13,6 +13,19 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var ng2_charts_1 = require('ng2-charts');
 var app_component_1 = require('./components/app.component');
+var hello_world_component_1 = require("./components/hello-world.component");
+var login_component_1 = require("./components/login.component");
+var router_1 = require("@angular/router");
+var overview_component_1 = require("./components/overview.component");
+var options_component_1 = require("./components/options.component");
+var details_component_1 = require("./components/details.component");
+var routes = [
+    { path: '', redirectTo: '/', pathMatch: 'full' },
+    { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'overview', component: overview_component_1.OverviewComponent },
+    { path: 'options', component: options_component_1.OptionsComponent },
+    { path: 'details', component: details_component_1.DetailsComponent },
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,11 +35,16 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 ng2_charts_1.ChartsModule,
+                router_1.RouterModule.forRoot(routes),
             ],
             declarations: [
                 app_component_1.AppComponent,
+                hello_world_component_1.HelloWorldComponent,
+                login_component_1.LoginComponent,
+                overview_component_1.OverviewComponent,
+                options_component_1.OptionsComponent,
+                details_component_1.DetailsComponent,
             ],
-            providers: [],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
