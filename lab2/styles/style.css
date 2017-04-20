@@ -248,6 +248,15 @@ footer {
   min-width: 0;
 }
 
+.main-container > * {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  /* flex-direction: column; */
+  flex-grow: 1;
+  padding: 12px;
+}
+
 .main-container, details-main-container {
   display: flex;
   flex-direction: column;
@@ -631,3 +640,4 @@ footer {
     flex-basis: 50%;
   }
 }
+
