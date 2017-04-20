@@ -248,7 +248,7 @@ footer {
   min-width: 0;
 }
 
-.main-container > * {
+.main-container > overview {
   flex-direction: row;
   justify-content: center;
   display: flex;
