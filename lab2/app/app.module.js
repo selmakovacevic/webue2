@@ -13,12 +13,13 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var ng2_charts_1 = require('ng2-charts');
 var app_component_1 = require('./components/app.component');
-var hello_world_component_1 = require("./components/hello-world.component");
 var login_component_1 = require("./components/login.component");
 var router_1 = require("@angular/router");
 var overview_component_1 = require("./components/overview.component");
 var options_component_1 = require("./components/options.component");
 var details_component_1 = require("./components/details.component");
+var navigation_component_1 = require("./components/navigation.component");
+var device_service_1 = require("./services/device.service");
 var routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
     { path: 'login', component: login_component_1.LoginComponent },
@@ -39,13 +40,14 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                hello_world_component_1.HelloWorldComponent,
                 login_component_1.LoginComponent,
                 overview_component_1.OverviewComponent,
                 options_component_1.OptionsComponent,
                 details_component_1.DetailsComponent,
+                navigation_component_1.NavigationComponent
             ],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            providers: [device_service_1.DeviceService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

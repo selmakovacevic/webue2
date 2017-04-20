@@ -4,12 +4,13 @@ import { FormsModule }    from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent }         from './components/app.component';
-import {HelloWorldComponent} from "./components/hello-world.component";
 import {LoginComponent} from "./components/login.component";
 import {RouterModule, Routes} from "@angular/router";
 import {OverviewComponent} from "./components/overview.component";
 import {OptionsComponent} from "./components/options.component";
 import {DetailsComponent} from "./components/details.component";
+import {NavigationComponent} from "./components/navigation.component";
+import {DeviceService} from "./services/device.service";
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -21,19 +22,20 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    BrowserModule,
-    FormsModule,
-    ChartsModule,
-    RouterModule.forRoot(routes),
+      BrowserModule,
+      FormsModule,
+      ChartsModule,
+      RouterModule.forRoot(routes),
   ],
   declarations: [
-    AppComponent,
-    HelloWorldComponent,
-    LoginComponent,
-    OverviewComponent,
+      AppComponent,
+      LoginComponent,
+      OverviewComponent,
       OptionsComponent,
       DetailsComponent,
+      NavigationComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [ DeviceService ]
 })
 export class AppModule { }

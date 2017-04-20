@@ -11,13 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = "World";
     }
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            templateUrl: '/app/views/root.html',
+            template: "\n        <div role=\"navigation\" aria-label=\"jumplinks\">\n            <a href=\"#devicesheadline\" class=\"accessibility\">Zum Inhalt springen</a>\n        </div>\n        \n        <header aria-labelledby=\"bannerheadline\">\n            <a routerLink=\"/overview\"><img class=\"title-image\" src=\"../../images/big-logo-small.png\" alt=\"BIG Smart Home logo\"></a>\n        \n            <h1 class=\"header-title\" id=\"bannerheadline\">\n                BIG Smart Home\n            </h1>\n            <navigation></navigation>\n        </header>\n        <div class=\"main-container\">\n            <router-outlet></router-outlet>\n        </div>\n        <footer>\n            \u00A9 2017 BIG Smart Home\n        </footer>\n        ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
