@@ -36,6 +36,6 @@ const routes: Routes = [
       NavigationComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [ DeviceService ]
+  providers: [ DeviceService]
 })
 export class AppModule { }
