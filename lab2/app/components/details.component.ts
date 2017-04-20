@@ -3,4 +3,5 @@ import { Component } from '@angular/core';
     selector: 'details',
     templateUrl: '/app/views/details.html'
 })
+
 export class DetailsComponent {}
