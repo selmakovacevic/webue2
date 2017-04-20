@@ -34,7 +34,7 @@ import {Device} from "../model/device";
             <h2 class="main-headline" id="devicesheadline">Geräte</h2>
             <div class="devices">
               <div *ngFor="let device of devices" class="device-outer" attr.data-device-id={{device.id}}>
-                <a routerLink="/details" class="device"
+                <a [routerLink]="['/details', device.id]" class="device"
                    title={{device.description}}>
                   <dl class="device-properties">
                     <dt>Anzeigename</dt>
@@ -63,6 +63,9 @@ export class OverviewComponent {
     devices: Device[];
 
     constructor(deviceService: DeviceService){
-        deviceService.getDevices().then(result => this.devices = result)
+        deviceService.getDevices().then(result => {
+            this.devices = result;
+            console.log(this.devices)
+        })
     }
 }

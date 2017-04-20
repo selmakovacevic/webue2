@@ -25,7 +25,7 @@ var routes = [
     { path: 'login', component: login_component_1.LoginComponent },
     { path: 'overview', component: overview_component_1.OverviewComponent },
     { path: 'options', component: options_component_1.OptionsComponent },
-    { path: 'details', component: details_component_1.DetailsComponent },
+    { path: 'details/:id', component: details_component_1.DetailsComponent },
 ];
 var AppModule = (function () {
     function AppModule() {
